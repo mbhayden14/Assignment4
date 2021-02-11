@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "Suggest a Restaurant for the Top 5";
+}
+
+@model  Assignment4FoodApp.Models.ApplicationResponse
+
+<h3>Please enter the following information. Restaurant ranking and name are required fields.</h3>
+
+<br />
+<br />
+
+<form asp-action="RestSubmission" method="post">
+
+    <div>
+        <label asp-for="RestRanking">Restaurant Ranking:</label>
+        <input asp-for="RestRanking" />
+    </div>
+
+    <div>
+        <label asp-for="RestName">Restaurant Name:</label>
+        <input asp-for="RestName" />
+    </div>
+
+    <div>
+        <label asp-for="FavDish">Favorite Dish:</label>
+        <input asp-for="FavDish" />
+    </div>
+
+    <div>
+        <label asp-for="RestPhone">Restaurant Phone:</label>
+        <input asp-for="RestPhone" />
+    </div>
+
+
+    <button type="submit">Submit Restaurant Suggestion</button>
+
+    <!-- Display error message with invalid input -->
+    <div asp-validation-summary="All" style="color: red; font-weight: bold"></div>
+
+
+</form>

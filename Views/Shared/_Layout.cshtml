@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Top 5 Restaurants in Provo</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header class=text-center>
+        <h1>@ViewBag.Title</h1>
+    </header>
+
+    <menu>
+        <ul>
+            <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+            <li><a asp-controller="Home" asp-action="RestaurantList">Top 5 Restaurants</a></li>
+            <li><a asp-controller="Home" asp-action="RestSubmission">Suggest a Restaurant</a></li>
+            <li><a asp-controller="Home" asp-action="RestDisplay">See Restaurant Suggestions</a></li>
+        </ul>
+    </menu>
+
+    <div class="text-center">
+        @RenderBody()
+    </div>
+
+
+    <br />
+    <br />
+    <br />
+    <footer>Miles Hayden, Inc. 2021</footer>
+
+</body>
+</html>
